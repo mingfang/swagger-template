@@ -20,7 +20,7 @@
   "scripts": {
     "start": "node app.js",
     "test": "swagger project test",
-    "edit": "swagger project edit",
+    "edit": "swagger project edit --host '0.0.0.0'",
     "watch": "nodemon app.js"
   }
 }
