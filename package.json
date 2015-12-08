@@ -21,6 +21,6 @@
     "start": "node app.js",
     "test": "swagger project test",
     "edit": "swagger project edit --host '0.0.0.0'",
-    "watch": "nodemon app.js"
+    "watch": "nodemon --watch api -e js,json,yaml app.js"
   }
 }

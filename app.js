@@ -22,6 +22,7 @@ SwaggerExpress.create(config, function(err, swaggerExpress) {
   var server = app.listen(port, function () {
     var host = server.address().address;
     var port = server.address().port;
+    console.log('Set DEBUG=swagger-tools* to print debug.')
     console.log('Swagger UI is at http://%s:%s/docs', host, port);
   });
 
