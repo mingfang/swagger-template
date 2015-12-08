@@ -19,10 +19,10 @@ SwaggerExpress.create(config, function(err, swaggerExpress) {
   swaggerExpress.register(app);
 
   var port = process.env.PORT || 3000;
-  app.listen(port);
+  var server = app.listen(port, function () {
+    var host = server.address().address;
+    var port = server.address().port;
+    console.log('Swagger UI is at http://%s:%s/docs', host, port);
+  });
 
-  if (swaggerExpress.runner.swagger.paths['/hello']) {
-    console.log('npm run edit to edit api');
-    console.log('http://127.0.0.1:' + port + '/docs' + ' to see swagger-ui');
-  }
 });
